@@ -1,6 +1,6 @@
 #include "my_timer.h"
 
-void TIMER_Config_Request(LPC_TIMER_T *pTMR, uint32_t tickrate_hz)
+void TIMER_Config_Request(LPC_TIMER_T *pTMR, timer_num_t timer_id, uint32_t tickrate_hz)
 {
     uint32_t timerFreq;
 
@@ -12,9 +12,9 @@ void TIMER_Config_Request(LPC_TIMER_T *pTMR, uint32_t tickrate_hz)
 
     /* Timer setup for match and interrupt at TICKRATE_HZ */
     Chip_TIMER_Reset(pTMR);
-    Chip_TIMER_MatchEnableInt(pTMR, 1);
-    Chip_TIMER_SetMatch(pTMR, 1, (timerFreq / tickrate_hz));
-    Chip_TIMER_ResetOnMatchEnable(pTMR, 1);
+    Chip_TIMER_MatchEnableInt(pTMR, timer_id);
+    Chip_TIMER_SetMatch(pTMR, timer_id, (timerFreq / tickrate_hz));
+    Chip_TIMER_ResetOnMatchEnable(pTMR, timer_id);
     Chip_TIMER_Enable(pTMR);
 
     /* Enable timer interrupt */
@@ -36,14 +36,14 @@ void TIMER_Config_Request(LPC_TIMER_T *pTMR, uint32_t tickrate_hz)
     }
 }
 
-void TIMER_Capture_Request(LPC_TIMER_T *pTMR, uint32_t tickrate_hz)
+void TIMER_Capture_Request(LPC_TIMER_T *pTMR, cap_num_t cap_id, uint32_t tickrate_hz)
 {
     Chip_TIMER_Init(pTMR);
     Chip_TIMER_Reset(pTMR);
     Chip_TIMER_PrescaleSet(pTMR, SystemCoreClock / tickrate_hz - 1);
 
-    Chip_TIMER_CaptureFallingEdgeEnable(pTMR, 0);
-    Chip_TIMER_CaptureEnableInt(pTMR, 0);
+    Chip_TIMER_CaptureFallingEdgeEnable(pTMR, cap_id);
+    Chip_TIMER_CaptureEnableInt(pTMR, cap_id);
 
     if(pTMR == LPC_TIMER16_0){
     	NVIC_ClearPendingIRQ(TIMER_16_0_IRQn);

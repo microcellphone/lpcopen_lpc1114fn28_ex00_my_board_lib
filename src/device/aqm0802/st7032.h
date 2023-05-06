@@ -1,5 +1,7 @@
 #ifndef _ST7032_H
-#define _ST7032_H 1
+#define _ST7032_H
+
+#include "my_i2c.h"
 
 #define ST7032_RS_CMD_WRITE	  	0x00
 #define ST7032_RS_DATA_WRITE	0x40

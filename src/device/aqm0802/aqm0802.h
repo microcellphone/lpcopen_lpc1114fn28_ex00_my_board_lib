@@ -2,6 +2,7 @@
 #define __AQM0802_H__
 
 #include "my_lpc1114fn28.h"
+#include "st7032.h"
 
 /* EEPROM SLAVE data */
 #define I2C_SLAVE_BUF_SIZE       6

@@ -14,6 +14,17 @@
 #include<stdint.h>
 #include "chip.h"
 
+#define BUFF_SIZE	64	/* Length of Receive/Transmission FIFO */
+
+typedef struct {
+  uint16_t	ri, wi, ct, act;
+  uint8_t		buff[BUFF_SIZE];
+} UART_BUFF_T;
+
+extern uint32_t UARTStatus;
+extern UART_BUFF_T TxBuff;
+extern UART_BUFF_T RxBuff;
+
 #define RS485_ENABLED		0
 //#define TX_INTERRUPT		0		/* 0 if TX uses polling, 1 interrupt driven. */
 #define TX_INTERRUPT		1		/* 0 if TX uses polling, 1 interrupt driven. */
@@ -63,6 +74,3 @@ extern volatile uint8_t UartCmd;
 #endif
 
 #endif /* end __UART_H */
-/*****************************************************************************
-**                            End Of File
-******************************************************************************/

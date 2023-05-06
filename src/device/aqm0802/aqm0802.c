@@ -1,7 +1,5 @@
 #include "aqm0802.h"
 #include "common_string.h"
-#include "st7032.h"
-#include "my_i2c.h"
 
 #define LCD_OSC_FREQ		0x04
 #define LCD_AMP_RATIO	0x02

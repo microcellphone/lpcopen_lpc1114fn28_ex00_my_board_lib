@@ -12,8 +12,8 @@ uint8_t sspreadbuf[2];
 
 void CS_Init(void)
 {
-	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 0, 2);
 	Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_2, (IOCON_FUNC0 | IOCON_MODE_INACT));
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 0, 2);
 	Chip_GPIO_SetPinState(LPC_GPIO, 0, 2, true);
 }
 

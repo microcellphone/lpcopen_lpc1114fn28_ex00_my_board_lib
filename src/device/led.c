@@ -27,7 +27,7 @@ void LED4_Config_Request(void)
 //=======================
 // Set LED State
 //=======================
-void LED_set_request(led_name_t led_num, bool state)
+void LED_Set_Request(led_name_t led_num, bool state)
 {
 	if(led_num == LED1)
 		Chip_GPIO_SetPinState(LPC_GPIO, LED1_PORT, LED1_BIT, state);

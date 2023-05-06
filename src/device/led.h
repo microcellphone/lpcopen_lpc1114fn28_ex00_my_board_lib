@@ -27,7 +27,7 @@ extern void LED1_Config_Request(void);
 extern void LED2_Config_Request(void);
 extern void LED3_Config_Request(void);
 extern void LED4_Config_Request(void);
-extern void LED_set_request(led_name_t led_num, bool state);
+extern void LED_Set_Request(led_name_t led_num, bool state);
 void LED_on_request(led_name_t led_num);
 void LED_off_request(led_name_t led_num);
 
