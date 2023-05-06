@@ -3,6 +3,8 @@
 
 #include "chip.h"
 
+#define ADC_INTERRUPT_MODE 0
+
 void ADC_Config_Request(void);
 uint32_t ADC_Get_Data(uint32_t channel);
 
