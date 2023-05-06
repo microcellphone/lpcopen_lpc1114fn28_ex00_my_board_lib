@@ -21,13 +21,22 @@ int AQM0802_setcursor( int col, int row )
 	return 1;
 }
 
+int AQM0802_putc( char c )
+{
+	ST7032_i2c_send_data((uint32_t)c);
+	Delay(1);
+
+	return 1;
+}
+
 int AQM0802_puts( char *str )
 {
 	uint8_t cnt;
 
 	for(cnt = 0; cnt<common_strlen(str); cnt++){
-		ST7032_i2c_send_data((uint32_t)str[cnt]);
-		Delay(1);
+//		ST7032_i2c_send_data((uint32_t)str[cnt]);
+//		Delay(1);
+		AQM0802_putc(str[cnt]);
 	}
 	
 	return 1;
