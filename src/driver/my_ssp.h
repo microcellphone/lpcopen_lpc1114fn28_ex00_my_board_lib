@@ -27,5 +27,7 @@ extern void  SPI_Tx_Rx_Data(uint8_t *txdata, uint8_t tx_length, uint8_t *rxdata,
 extern uint32_t SPI_TxRxData(uint32_t txdata);
 extern void SPI_TxData(uint32_t txdata);
 extern uint32_t SPI_RxData(void);
+extern void SSP0_Send_Request(uint8_t dat);
+extern void SSP0_Send_Request16(uint16_t dat);
 
 #endif // __MY_SSP_H__
