@@ -3,6 +3,9 @@
 
 #include "my_lpc1114fn28.h"
 
+#define CH0 0
+#define CH1 1
+
 extern uint32_t MCP3202_Read_Reg(uint32_t addr);
 extern void MCP3202_Config_Request(void);
 

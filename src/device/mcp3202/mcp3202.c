@@ -3,8 +3,6 @@
 
 #include <my_ssp.h>
 
-extern void CS_Init(void);
-
 #define CS_PORT_NUM		0
 #define CS_PIN_NUM		2
 
@@ -26,7 +24,8 @@ void CS_Force(int32_t state)
 
 void MCP3202_Config_Request(void)
 {
-	SPI_Config_Request(8, SSP_SLOW, CS_AUTO);
+	SPI_Config_Request(8, SSP_SLOW, CS_GPIO);
+	CS_Init();
 }
 
 
