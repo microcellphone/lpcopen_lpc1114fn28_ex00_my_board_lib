@@ -1,1 +1,19 @@
 # lpcopen_lpc1114fn28_ex00_my_board_lib
+you need to link this library to run the below projects.
+
+lpcopen_lpc1114fn28_ex01_gpio_led_sw
+lpcopen_lpc1114fn28_ex02_gpio_led_sw_interrupt
+lpcopen_lpc1114fn28_ex03_timer_led_sw
+lpcopen_lpc1114fn28_ex0301_timer_cap_sw
+lpcopen_lpc1114fn28_ex04_timer_pwm_led
+lpcopen_lpc1114fn28_ex05_uart_xprintf
+lpcopen_lpc1114fn28_ex0501_uart_xprintf
+lpcopen_lpc1114fn28_ex06_adc
+lpcopen_lpc1114fn28_ex0601_adc_interrupt
+lpcopen_lpc1114fn28_ex07_i2c_AQM0802
+lpcopen_lpc1114fn28_ex0701_i2c_AQM0802_xprintf
+lpcopen_lpc1114fn28_ex08_i2c_RTC8564
+
+
+
+
