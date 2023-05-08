@@ -15,7 +15,7 @@ lpcopen_lpc1114fn28_ex0701_i2c_AQM0802_xprintf
 lpcopen_lpc1114fn28_ex08_i2c_RTC8564
 lpcopen_lpc1114fn28_ex09_ssp_SSD1306
 lpcopen_lpc1114fn28_ex10_ssp_MCP3202
-
+lpcopen_lpc1114fn28_ex1101_ssp_SDCARD
 
 
 
