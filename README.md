@@ -13,6 +13,8 @@ lpcopen_lpc1114fn28_ex0601_adc_interrupt
 lpcopen_lpc1114fn28_ex07_i2c_AQM0802
 lpcopen_lpc1114fn28_ex0701_i2c_AQM0802_xprintf
 lpcopen_lpc1114fn28_ex08_i2c_RTC8564
+lpcopen_lpc1114fn28_ex09_ssp_SSD1306
+lpcopen_lpc1114fn28_ex10_ssp_MCP3202
 
 
 
