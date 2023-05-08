@@ -1,5 +1,5 @@
 # lpcopen_lpc1114fn28_ex00_my_board_lib
-you need to link this library to run the below projects in MCUXpresso with.
+You need to link this library to run the below projects in MCUXpresso with the lpc_chip_11cxx_lib.
 
 lpcopen_lpc1114fn28_ex01_gpio_led_sw
 lpcopen_lpc1114fn28_ex02_gpio_led_sw_interrupt
